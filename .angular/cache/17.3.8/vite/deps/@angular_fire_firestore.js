@@ -1,7 +1,4 @@
 import {
-  AuthInstances
-} from "./chunk-SUMMQ2W2.js";
-import {
   AbstractUserDataWriter,
   AggregateField,
   AggregateQuerySnapshot,
@@ -116,6 +113,9 @@ import {
   where,
   writeBatch
 } from "./chunk-BRTXEWV3.js";
+import {
+  AuthInstances
+} from "./chunk-SUMMQ2W2.js";
 import "./chunk-Q5LUXCBS.js";
 import {
   FirebaseApp,
