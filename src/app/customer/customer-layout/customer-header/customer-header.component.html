@@ -1,0 +1,88 @@
+<!-- Header -->
+<header class="header-fixed">
+  <!-- Header desktop -->
+  <div class="wrap-menu-header gradient1 trans-0-4">
+    <div class="container h-full ">
+      <div class="wrap_header trans-0-3" >
+        <!-- Logo -->
+        <div class="logo" >
+          <a routerLink="/customer/home" style="height: 50px;" >
+            <img src="/assets/images/black2.png" alt="IMG-LOGO" data-logofixed="/assets/images/foodbox-elite-services-high-resolution-logo-white-transparent.png">
+          </a>
+        </div>
+
+        <!-- Menu -->
+        <div class="wrap_menu p-r-20  class1">
+          <nav class="menu">
+            <ul class="main_menu" >
+              
+              <li>
+                <a routerLink="/customer/home" style="transition: all 0.8s;"><b>HOME</b></a>
+              </li>
+
+              <li>
+                <a routerLink="/customer/about" style="transition: all 0.8s;"><b>ABOUT</b></a>
+              </li>
+
+              <li>
+                <a routerLink="/customer/view-meals" style="transition: all 0.8s;"><b>MEALS</b></a>
+              </li>
+
+              <li>
+                <a routerLink="/customer/view-pricing" style="transition: all 0.8s;"><b>PRICING</b></a>
+              </li>
+              <li>
+
+                @if(login) {
+                
+                  <a routerLink="/customer/custom-bookings" style="transition: all 0.8s;"><b>CUSTOM </b></a>
+                
+              }
+                <li>
+
+              @if(login) {                
+                <a routerLink="/customer/view-my-bookings" style="transition: all 0.8s"><b>BOOKINGS</b></a>                
+              }
+              
+                <!-- @else {
+                <a routerLink="/customer/register" style="transition: all 0.8s;"><b>REGISTER</b></a>
+                } -->
+
+                </li>
+
+                <li>
+
+                  @if(login) {
+                    
+                      <!-- <a routerLink="/customer/view-my-bookings" style="transition: all 0.8s"><b>BOOKINGS</b></a> -->
+                      
+                    <a routerLink="/customer/update-profile" style="transition: all 0.8s;"><b>UPDATE PROFILE</b></a>
+                    
+                  }
+                  
+                    @else {
+                    <a routerLink="/customer/register" style="transition: all 0.8s;"><b>REGISTER</b></a>
+                    }
+    
+                    </li>
+                
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Social -->
+        <div class="social flex-w flex-l-m p-r-20">
+         
+          @if(login) {
+          <a (click)="logout()" class="submit text-white bg-danger btn btn-lg" > Logout</a>
+          } 
+          @else {
+          <a class="submit text-white bg-danger btn btn-lg" routerLink="/login" >Login</a>
+          }
+
+        </div>
+      </div>
+    </div>
+  </div> 
+</header>
+	

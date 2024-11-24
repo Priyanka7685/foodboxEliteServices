@@ -1,0 +1,78 @@
+<section class="section-booking bg1-pattern p-t-100 p-b-130">
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-lg-6 p-b-30">
+                <div class="t-center">
+                    <span class="tit2 t-center" >
+                        <h3 class="cls1 mt-5 pb-4" style="font-size: 50px;">Register</h3>
+                    </span>
+
+                    <!-- <h3 class="tit15 t-center m-b-35 m-t-2">
+                         Register yourself
+                    </h3> -->
+                    <button type="submit" class="submit text-white btn3 size13 txt11 trans-0-4" routerLink="/customer/home">Back to home</button>
+                </div>
+                <p class="text-center py-3 ">Already have an account?<a routerLink="/login"><b>Login Now</b></a></p>
+                
+
+                <form (submit)="regSub()" #registerForm="ngForm" class="wrap-form-booking" >
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <!-- Email -->
+                            <span class="txt9">
+                                Name
+                            </span>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" [(ngModel)]="userObj.name"  required>
+                            </div>
+
+
+                            <span class="txt9">
+                                Mobile number
+                            </span>
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="tel" name="contact" [(ngModel)]="userObj.contact" required>
+                            </div>
+
+                            <span class="txt9">
+                                Email
+                            </span> 
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" [(ngModel)]="userObj.email"  required>
+                            </div>
+
+                            <span class="txt9">
+                                Password
+                            </span>
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="password" id="password" name="password"  [(ngModel)] = "userObj.password"  required>
+                            </div>
+
+                            <span class="txt9">
+                                Address
+                            </span>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <textarea class="bo-rad-10 sizefull txt10 p-l-20"  name="address" [(ngModel)]="userObj.address" required></textarea>
+                            </div>
+                
+                        </div>
+                    </div>
+                    <div class="wrap-btn-booking flex-c-m m-t-6">
+                        <!-- Button3 -->
+                        <button type="submit" class="btn3 flex-c-m size17 txt11 trans-0-4" [disabled]="registerForm.invalid">
+                            Create my account
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="col-3"></div>
+            </div>
+        </div>
+</section>

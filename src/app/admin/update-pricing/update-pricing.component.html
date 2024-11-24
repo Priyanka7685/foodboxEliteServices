@@ -1,0 +1,73 @@
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="
+    background-image: url(assets/images/bcg2.jpg); 
+  ">
+    <!-- <h2 class="tit6 t-center">Dashboard</h2> -->
+    <div class="title-event t-center m-b-52">
+        <span class="tit2 p-l-15 p-r-15 " style="font-size: 70px;">
+            Update Pricing
+        </span>
+        <h3><a routerLink="/admin/dashboard" class=" p-1" style="font-size: 20px;" >Dashboard/</a>
+            <a routerLink="/admin/add-meals" class=" p-1" style="font-size: 20px;" >Update Pricing</a></h3>
+        </div>
+
+</section>
+
+<section class="section-booking bg1-pattern p-t-100 p-b-110">
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-lg-6 p-b-30">
+                <div class="t-center">
+                    <span class="tit2 t-center">
+                        Update Pricing
+                    </span>
+
+                </div>
+
+                <form (submit)="updatePricing()"  class="wrap-form-booking" >
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <!-- duration -->
+                            <span class="txt9">
+                                Duration
+                             </span>
+ 
+                             <div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                 <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" [(ngModel)]="priceObj.duration">
+                             </div>
+                            
+                            <!-- Breakfast -->
+                            <span class="txt9">
+                               Description
+                            </span>
+
+                            <div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <textarea class="bo-rad-10 sizefull txt10 p-l-20" style="height: 70px;" type="text" name="description" [(ngModel)]="priceObj.description" ></textarea>
+                            </div>
+
+                             <!-- Price -->
+                             <span class="txt9">
+                                Price
+                             </span>
+ 
+                             <div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                 <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="price" [(ngModel)]="priceObj.price">
+                             </div>
+
+
+                        </div>
+                    </div>
+                    <div class="wrap-btn-booking flex-c-m m-t-10">
+                        <!-- Button3 -->
+                        <button type="submit" class="btn3 flex-c-m size13 txt11 trans-0-4" >
+                            Update Pricing
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="col-3"></div>
+            </div>
+        </div>
+</section>

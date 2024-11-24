@@ -1,0 +1,62 @@
+<header class="header-fixed">
+    <!-- Header desktop -->
+    <div class="wrap-menu-header gradient1 trans-0-4">
+      <div class="container h-full">
+        <div class="wrap_header trans-0-3">
+          <!-- Logo -->
+        <div class="logo" >
+          <a routerLink="/customer/home" style="height: 50px;" >
+            <img src="/assets/images/black2.png" alt="IMG-LOGO" data-logofixed="/assets/images/foodbox-elite-services-high-resolution-logo-white-transparent.png">
+          </a>
+        </div>
+
+
+          <!-- Menu -->
+          <div class="wrap_menu p-l-15 p-l-0-xl">
+            <nav class="menu">
+              <ul class="main_menu text-white">
+                <!-- Dashboard -->
+                <li>
+                  <a routerLink="/admin/dashboard"><b>Dashboard</b></a>
+                </li>
+  
+                <!-- Customers -->
+                <li>
+                  <a routerLink="/admin/manage-customers"><b>Customers</b></a>
+                </li>
+
+                <!-- Meals -->
+                <li>
+                  <a routerLink="/admin/manage-meals"><b>Meals</b></a>
+                </li>
+
+                <!-- Pricing -->
+                <li>
+                  <a routerLink="/admin/manage-pricing"><b>Pricing</b></a>
+                </li>
+
+                <!-- Bookings -->
+                <li>
+                  <a routerLink="/admin/manage-bookings"><b>Bookings</b></a>
+                </li>
+
+                <!-- Custom-Bookings -->
+                <li>
+                  <a routerLink="/admin/manage-custom-bookings"><b>Custom Bookings</b></a>
+                </li>
+ 
+              </ul>
+            </nav>
+          </div>
+  
+          
+          <!-- Social -->
+          <div class="social flex-w flex-l-m p-r-20 m-l-30">
+           
+            <a (click)="logout()" class="submit text-white bg-danger btn btn-lg"  > Logout</a>
+             
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

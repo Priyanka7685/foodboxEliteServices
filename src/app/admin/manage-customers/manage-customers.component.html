@@ -1,0 +1,53 @@
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="
+    background-image: url(assets/images/bcg2.jpg); 
+  ">
+    <!-- <h2 class="tit6 t-center">Dashboard</h2> -->
+    <div class="mgcust title-event t-center m-b-52">
+        <div class="tit2 p-l-15 p-r-15 " style="font-size: 70px;">
+            Manage Customers
+        </div>
+
+        <a routerLink="/admin/dashboard" style="font-size: 20px;">Dashboard/</a>
+        <a routerLink="/admin/manage-customers" style="font-size: 20px;">Manage-customers</a>
+        
+        </div>
+
+</section>
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <table class="table table-danger">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Address</th>
+                <th scope="col">Created At</th>
+                <th scope="col" style="text-align: start;">Status</th>
+              </tr>
+              
+            </thead>
+            <tbody>
+              @for (x of customers; track $index) {
+                <tr>
+                  <th scope="row">{{$index+1}}</th>
+                  <td>{{x.name}}</td>
+                  <td>{{x.email}}</td>
+                  <td>{{x.contact}}</td>
+                  <td>{{x.address}}</td>
+                  <td>{{x.createdAt | date: 'short'}}</td>
+                  <td>
+                    @if(x?.status == true)
+								{
+                    <button class="btn btn-success m-r-15 "(click)="changeStatusFunc(x?.id, true)" ><i class="bi bi-person-check fs-4"></i></button>
+                      <button class="btn btn-danger " (click)="changeStatusFunc(x?.id, false)" ><i class="bi bi-ban fs-4" ></i></button>
+                }
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+    </div>
+</div>

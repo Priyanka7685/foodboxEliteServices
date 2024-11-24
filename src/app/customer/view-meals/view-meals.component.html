@@ -1,0 +1,162 @@
+<section
+  class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
+  style="background-image: url(/assets/images/bg-title-page-01.jpg)"
+>
+  <h2 class="cls1 tit6 t-center">Menu</h2>
+</section>
+
+<!-- Main menu -->
+<section class="section-mainmenu p-t-110 p-b-70 bg1-pattern">
+  <div class="container">
+    <div class="row">
+        @for (x of viewMeals; track $index) {
+      <div class="col-md-5 col-lg-6 p-r-35 p-r-15-lg m-l-r-auto">
+        <!--col-lg-6-->
+        
+        <div class="wrap-item-mainmenu p-b-22">
+          <h3
+            class="tit-mainmenu tit10 p-b-25 text-danger"
+            style="text-align: center; font-size: 50px"
+          >
+            {{ x?.type }}
+          </h3>
+        </div>
+
+        <!-- Item mainmenu -->
+        <div class="item-mainmenu m-b-36">
+          <p class="text-danger" style="font-size: 20px"><b>Monday: </b></p>
+          <div class="flex-w flex-b m-b-3">
+            <p class="name-item-mainmenu txt21">
+              {{ x.day1 }}
+            </p>
+
+            <div class="line-item-mainmenu bg3-pattern"></div>
+
+            <div class="price-item-mainmenu txt22">
+              {{ x.pricePerDay | currency:"INR" }}
+            </div>
+          </div>
+
+          <span class="info-item-mainmenu txt23">
+            
+          </span>
+        </div>
+
+        <!-- Item mainmenu -->
+        <div class="item-mainmenu m-b-36">
+          <p class="text-danger" style="font-size: 20px"><b>Tuesday: </b></p>
+          <div class="flex-w flex-b m-b-3">
+            <p class="name-item-mainmenu txt21">
+              {{ x.day2 }}
+            </p>
+
+            <div class="line-item-mainmenu bg3-pattern"></div>
+
+            <div class="price-item-mainmenu txt22">
+              {{ x.pricePerDay | currency:"INR" }}
+            </div>
+          </div>
+        </div>
+
+        <!-- Item mainmenu -->
+        <div class="item-mainmenu m-b-36">
+          <p class="text-danger" style="font-size: 20px"><b>Wednesday: </b></p>
+          <div class="flex-w flex-b m-b-3">
+            <p class="name-item-mainmenu txt21">
+              {{ x.day3 }}
+            </p>
+
+            <div class="line-item-mainmenu bg3-pattern"></div>
+
+            <div class="price-item-mainmenu txt22">
+              {{ x.pricePerDay | currency:"INR" }}
+            </div>
+          </div>
+
+          <span class="info-item-mainmenu txt23">
+            <!-- {{ x.day3 }} -->
+          </span>
+        </div>
+
+        <!-- Item mainmenu -->
+        <div class="item-mainmenu m-b-36">
+          <p class="text-danger" style="font-size: 20px"><b>Thursday: </b></p>
+          <div class="flex-w flex-b m-b-3">
+            <p class="name-item-mainmenu txt21">
+              {{ x.day4 }}
+            </p>
+
+            <div class="line-item-mainmenu bg3-pattern"></div>
+
+            <div class="price-item-mainmenu txt22">
+              {{ x.pricePerDay | currency:"INR" }}
+            </div>
+          </div>
+
+          <span class="info-item-mainmenu txt23">
+            <!-- {{ x.day4 }} -->
+          </span>
+        </div>
+
+        <div class="item-mainmenu m-b-36">
+          <p class="text-danger" style="font-size: 20px"><b>Friday: </b></p>
+          <div class="flex-w flex-b m-b-3">
+            <p class="name-item-mainmenu txt21">
+              {{ x.day5 }}
+            </p>
+
+            <div class="line-item-mainmenu bg3-pattern"></div>
+
+            <div class="price-item-mainmenu txt22">
+              {{ x.pricePerDay | currency:"INR" }}
+            </div>
+          </div>
+
+          <span class="info-item-mainmenu txt23">
+            <!-- {{ x.day5 }} -->
+          </span>
+        </div>
+
+        <div class="item-mainmenu m-b-36">
+          <p class="text-danger" style="font-size: 20px"><b>Saturday: </b></p>
+          <div class="flex-w flex-b m-b-3">
+            <p class="name-item-mainmenu txt21">
+              {{ x.day6 }}
+            </p>
+
+            <div class="line-item-mainmenu bg3-pattern"></div>
+
+            <div class="price-item-mainmenu txt22">
+              {{ x.pricePerDay | currency:"INR" }}
+            </div>
+          </div>
+
+          <!-- <span class="info-item-mainmenu txt23">
+            {{ x.day6 }}
+          </span> -->
+        </div>
+
+        <div class="item-mainmenu m-b-36">
+          <p class="text-danger" style="font-size: 20px"><b>Sunday: </b></p>
+          <div class="flex-w flex-b m-b-3">
+            <p class="name-item-mainmenu txt21">
+              {{ x.day7 }}
+            </p>
+
+            <div class="line-item-mainmenu bg3-pattern"></div>
+
+            <div class="price-item-mainmenu txt22">
+              {{ x.pricePerDay | currency:"INR" }}
+            </div>
+          </div>
+
+          <span class="info-item-mainmenu txt23">
+            <!-- {{ x.day7 }} -->
+          </span>
+        </div>
+        
+      </div>
+    }
+    </div>
+  </div>
+</section>

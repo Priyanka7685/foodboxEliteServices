@@ -1,0 +1,40 @@
+.cls1{
+    animation-name: square;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    position: relative;
+}
+
+@keyframes square{
+    0%{
+        transform: rotate(0deg);
+        right:900px
+    }
+    100%{
+        transform: rotate(360deg);
+        right: 0px;
+        
+    }
+}
+
+
+.cls2{
+
+    animation-name: b;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    position: relative;
+    /* animation-direction: reverse; */
+}
+
+@keyframes b{
+    0%{
+        /* transform: rotate(360deg); */
+        right:1300px;
+    }
+    100%{
+        /* transform: rotate(0deg); */
+        right: 0px;
+        
+    }
+}

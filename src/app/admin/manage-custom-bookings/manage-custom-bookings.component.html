@@ -1,0 +1,60 @@
+<!-- Title Page -->
+
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="
+    background-image: url(assets/images/bcg2.jpg); 
+  ">
+    <div class="mgcustbook title-event t-center m-b-52">
+        <span class="tit2 p-l-15 p-r-105 " style="font-size: 60px;">
+            Manage Custom Bookings
+        </span>
+        <h3><a routerLink="/admin/dashboard" class=" p-1" style="font-size: 20px;" >Dashboard/</a>
+            <a routerLink="/admin/manage-custom-bookings" class=" p-1" style="font-size: 20px;" >Manage Custom Bookings</a></h3>
+        </div>
+
+</section>
+
+
+<!-- Bookings Table -->
+<div class="container-xxl py-5 ">
+    <!-- <div class="container"> -->
+        <table class="table table-danger">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Breakfast </th>
+                <th scope="col">Lunch </th>
+                <th scope="col">Dinner </th>
+                <th scope="col">Days </th>
+                <th scope="col">Start</th>
+                <th scope="col">End</th>
+                <th scope="col">Final Price</th>
+                <th scope="col">Created At</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (x of custom; track $index) {
+              <tr>
+                <th scope="row">{{$index+1}} </th>
+                <td>{{x.customerName}} </td>
+                <td>{{x.breakfast}} </td>
+                <td>{{x.lunch}}</td>
+                <td>{{x.dinner}}</td>
+                <td>{{x.days}}</td>
+                <td>{{x.start}}</td>
+                <td>{{x.end}}</td>
+                <td>{{x.finalPrice | currency: 'INR'}}</td>
+                <td>{{x.joinedAt | date:'short'}}</td>
+
+                <td>
+                    <button class="btn btn-success m-r-10"  (click)="changeStatusFunc(x?.id, 'Approved')"><i class="bi bi-person-check fs-4"></i></button>
+
+                    <button class="btn btn-danger" (click)="changeStatusFunc(x?.id, 'Declined')"><i class="bi bi-ban fs-4"></i></button>
+                </td>
+              </tr>
+            }
+            </tbody>
+          </table>
+    <!-- </div> -->
+</div>

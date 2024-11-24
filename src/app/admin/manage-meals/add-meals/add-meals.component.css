@@ -1,0 +1,19 @@
+.addmeal{
+
+    animation-name: square;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    position: relative;
+}
+
+@keyframes square{
+    0%{
+        /* transform: rotate(0deg); */
+        right:1000px
+    }
+    100%{
+        /* transform: rotate(360deg); */
+        right: 0px;
+        
+    }
+}

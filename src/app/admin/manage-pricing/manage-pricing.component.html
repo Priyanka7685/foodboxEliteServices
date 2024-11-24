@@ -1,0 +1,127 @@
+<!-- Title Page -->
+
+<section
+  class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
+  style="background-image: url(assets/images/bcg2.jpg)"
+>
+  <!-- <h2 class="tit6 t-center">Dashboard</h2> -->
+  <div class="mgprice title-event t-center m-b-52">
+    <span class="tit2 p-l-15 p-r-15" style="font-size: 70px">
+      Manage Pricing
+    </span>
+    <h3>
+      <a routerLink="/admin/dashboard" class="p-1" style="font-size: 20px"
+        >Dashboard/</a
+      >
+      <a routerLink="/admin/manage-pricing" class="p-1" style="font-size: 20px"
+        >Manage pricing</a
+      >
+    </h3>
+  </div>
+</section>
+
+<!-- Meals Table -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10">
+        <h1>Manage Pricing</h1>
+      </div>
+      <div class="col-lg-2 text-end">
+        <button class="btn btn-danger" routerLink="/admin/add-pricing">
+          Add Pricing
+        </button>
+      </div>
+    </div>
+    <!-- <table class="table table-danger">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Duration</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          <th scope="col">Created At</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (x of managePrice ; track $index) {
+        <tr>
+          <th scope="row">{{ $index + 1 }}</th>
+          <td>
+            <b>{{ x?.duration }}</b>
+          </td>
+          <td>{{ x?.description }}</td>
+          <td>{{ x?.breakfast }}</td>
+          <td>{{ x?.lunch }}</td>
+          <td>{{ x?.dinner }}</td>
+          <td>{{ x?.price | currency : "INR" }}</td>
+          <td>{{ x?.createdAt | date : "short" }}</td>
+          <td>
+            <button
+              class="btn btn-success m-r-10"
+              [routerLink]="['/admin/update-pricing', x?.id]"
+            >
+              <i class="bi bi-pen fs-4"></i>
+            </button>
+            <button
+              class="btn btn-danger m-b-2 m-t-5"
+              (click)="deleteFunc(x?.id)"
+            >
+              <i class="bi bi-trash3 fs-4"></i>
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table> -->
+    <table class="table table-danger">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Duration</th>
+					<th scope="col">Days</th>
+					<th scope="col" style="width: 250px;">Description</th>
+					<th scope="col">Breakfast</th>
+					<th scope="col">Lunch</th>
+					<th scope="col">Dinner</th>
+					<th scope="col">Price</th>
+					<th scope="col">CreatedAt</th>
+					<th scope="col">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				@for (x of managePrice; track $index) {
+				<tr>
+					<th scope="row">{{$index+1}}</th>
+					<td>{{x?.duration}} Months</td>
+					<td>{{x?.days}}</td>
+					<td>{{x?.description}}</td>
+					<td>{{x?.breakfast}}</td>
+					<td>{{x?.lunch}}</td>
+					<td>{{x?.dinner}}</td>
+					<td>{{x?.price | currency:'INR'}}</td>
+					<td>{{x?.createdAt | date:'short'}}</td>
+					<td>
+            <button
+            class="btn btn-success m-r-10"
+            [routerLink]="['/admin/update-pricing', x?.id]"
+          >
+            <i class="bi bi-pen fs-4"></i>
+          </button>
+          <button
+            class="btn btn-danger m-b-2 m-t-5"
+            (click)="deleteFunc(x?.id)"
+          >
+            <i class="bi bi-trash3 fs-4"></i>
+          </button>
+					</td>
+				</tr>
+				}
+
+			</tbody>
+		</table>
+  </div>
+  <!-- </div> -->
+</div>

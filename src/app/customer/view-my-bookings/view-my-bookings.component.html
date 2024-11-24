@@ -1,0 +1,96 @@
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
+	style="background-image: url(assets/images/bg-event-04.jpg);">
+	<h2 class="tit6 t-center">
+		Booking History
+	</h2>
+</section>
+
+<section class=" p-t-120 p-b-105">
+	<div class="container">
+		<div class="row">
+			<div class="col-10" style="margin-bottom: 20px;">
+				<h3>Booking History</h3>
+			</div>
+		</div>
+		<table class="table ">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Customer Name</th>
+					<th scope="col">Price</th>
+					<th scope="col">Duration</th>
+					<th scope="col">Start Date</th>
+					<th scope="col">End Date</th>
+					<th scope="col">Status</th>
+					<th scope="col">CreatedAt</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+					@for (x of bookings; track $index) {
+						<tr>
+					<th scope="row">{{$index+1}}</th>
+					<td>{{x?.customerName}}</td>
+					<td>{{x?.price | currency:'INR'}}</td>
+					<td>{{x?.duration}} </td>
+					<td>{{x?.start}}</td>
+					<td>{{x?.end}}</td>
+					<td>{{x?.status}}</td>
+					<td>{{x?.createdAt | date:'short'}}</td>
+					<td>
+						
+					</td>
+				</tr>
+				}
+				
+			</tbody>
+		</table>
+	</div>
+	<hr/>
+	<div class="container">
+		<div class="row">
+			<div class="col-10" style="margin-bottom: 20px;">
+				<h3>Custom Booking History</h3>
+			</div>
+		</div>
+		<table class="table ">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Customer Name</th>
+					<th scope="col">Breakfast</th>
+					<th scope="col">Lunch</th>
+					<th scope="col">Dinner</th>
+					<th scope="col">Days</th>
+					<th scope="col">Start Date</th>
+					<th scope="col">End Date</th>
+					<th scope="col">Final Price</th>
+					<th scope="col">Status</th>
+					<th scope="col">CreatedAt</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+					@for (y of custombookings; track $index) {
+						<tr>
+					<th scope="row">{{$index+1}}</th>
+					<td>{{y?.customerName}}</td>
+					<td>{{y?.breakfast}}</td>
+					<td>{{y?.lunch}}</td>
+					<td>{{y?.dinner}}</td>
+					<td>{{y?.days}}</td>
+					<td>{{y?.start}}</td>
+					<td>{{y?.end}}</td>
+					<td>{{y?.finalPrice | currency:'INR'}}</td>
+					<td>{{y?.status}}</td>
+					<td>{{y?.joinedAt | date:'short'}}</td>
+					<td>
+						
+					</td>
+				</tr>
+				}
+				
+			</tbody>
+		</table>
+	</div>
+</section>

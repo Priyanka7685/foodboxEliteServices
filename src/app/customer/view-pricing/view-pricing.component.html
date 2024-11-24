@@ -1,0 +1,108 @@
+<section
+  class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15"
+  style="background-image: url(/assets/images/bg-title-page-01.jpg)"
+>
+  <h2 class="cls1 tit6 t-center">Pricing</h2>
+</section>
+
+<section class="section-chef bgwhite p-t-115 p-b-95">
+    <div class="container t-center">
+        <span class="tit2 t-center">
+             Our
+        </span>
+
+        <h3 class=" tit5 t-center m-b-50 m-t-5">
+            Pricing
+        </h3>
+
+        
+             <!-- <div class="row">
+                @for (x of viewPrice ; track $index) {
+            <div class="col-md-8 col-lg-4 m-l-r-auto p-b-30">
+
+                <div class="blo5 pos-relative p-t-60">
+                    <div class="pic-blo5 size25 bo4 wrap-cir-pic hov-img-zoom ab-c-t">
+							<a href="#"><img src="assets/images/bcg3.jpg" alt="IGM-AVATAR"></a>
+                    </div>
+
+                    <div class="text-blo5 size34 t-center bo-rad-10 bo7 p-t-90 p-l-35 p-r-35 p-b-30">
+                        <a href="#" class="txt34 dis-block p-b-6" >
+                            {{x?.duration}}
+                        </a>
+
+                        <p class="t-center" style="font-size: 18px;">
+                            <td>{{x?.description}}</td> 
+                        </p>
+
+                        <p class="t-center p-t-30 p-l-90" style="font-size: 25px;">
+                            <td>{{x?.price | currency: 'INR'}}</td> 
+                        </p>
+
+                         <span class="dis-block t-center txt35 p-b-25 p-t-25">
+                        @if(login) {
+                        <button type="submit" [routerLink]="['/customer/add-bookings',x?.id]" class="btn3 flex-c-m size17 txt11 trans-0-4 " >
+                            Add Bookings
+                        </button>
+                    }
+                    @else {
+                        
+                            
+                            <button routerLink="/login" class="btn3 flex-c-m size17 txt11 trans-0-4 " >
+                                Login to Book
+                            </button>
+                        }
+                    
+                    </span>
+                    </div>
+                </div>
+            
+            </div>
+        }
+            </div> -->
+        
+            <div class="row">
+                @for (x of viewPrice; track $index) {
+                    <div class="col-md-8 col-lg-4 m-l-r-auto p-b-30">
+                        <!-- -Block5 -->
+                        <div class="blo5 pos-relative p-t-60" style="height: 600px !important;">
+                            <div class="pic-blo5 size25 bo4 wrap-cir-pic hov-img-zoom ab-c-t">
+                                <a href="#"><img src="assets/images/bcg3.jpg" alt="IGM-AVATAR"></a>
+                            </div>
+    
+                            <div class="text-blo5 size34 t-center bo-rad-10 bo7 p-t-90 p-l-35 p-r-35 p-b-30">
+                                <a href="#" class="txt34 dis-block p-b-6" style="font-size: 25px;">
+                                    {{x?.price | currency:'INR'}}
+                                </a>
+    
+                                <span class="dis-block t-center txt35 p-b-25" style="font-size: 15px;">
+                                    {{x?.duration}} Months , ({{x?.days}} Days)
+                                </span>
+    
+                                <p class="t-center m-b-10">
+                                    Breakfast Count : {{x?.breakfast}} <br>
+                                    Lunch Count : {{x?.lunch}} <br>
+                                    Dinner Count : {{x?.dinner}}
+                                    _____________________________________
+                                    {{x?.description}} 
+                                </p>
+                                @if(login) {
+                                    <button type="submit" [routerLink]="['/customer/add-bookings',x?.id]" class="btn3 flex-c-m size17 txt11 trans-0-4 " >
+                                        Add Bookings
+                                    </button>
+                                }
+                                @else {
+                                    
+                                        
+                                        <button routerLink="/login" class="btn3 flex-c-m size17 txt11 trans-0-4 " >
+                                            Login to Book
+                                        </button>
+                                    }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>   
+    
+    <!-- </div> -->
+</section>

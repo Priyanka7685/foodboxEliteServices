@@ -1,0 +1,68 @@
+<section class="section-booking bg1-pattern p-t-100 p-b-130">
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-lg-6 p-b-30">
+                <div class="t-center">
+                    <span class="tit2 t-center" >
+                        <h3 class="mt-5 pb-4" style="font-size: 50px;">Update Your Profile</h3>
+                    </span>
+
+                    <button type="submit" class="submit text-white btn3 size13 txt11 trans-0-4" routerLink="/customer/home">Back to home</button>
+                </div>
+
+                <form (submit)="updateProfile()" #register class="wrap-form-booking" >
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            
+                            <span class="txt9">
+                                Name
+                            </span>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name" [(ngModel)] = "userObj.name">
+                            </div>
+
+                            <span class="txt9">
+                                Email
+                            </span>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email1" [(ngModel)] = 'userObj.email' required>
+                            </div>
+
+                            <span class="txt9">
+                                Mobile number
+                            </span>
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="tel" name="contact" [(ngModel)] = 'userObj.contact' required>
+                            </div>
+
+ 
+                            <span class="txt9">
+                                Address
+                            </span>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <textarea class="bo-rad-10 sizefull txt10 p-l-20"  name="address" [(ngModel)] = "userObj.address" required></textarea>
+                            </div>
+                
+                        </div>
+                    </div>
+                    <div class="wrap-btn-booking flex-c-m m-t-6">
+                       
+
+                        <button type="submit" class="btn3 flex-c-m size17 txt11 trans-0-4" (click) = "updateProfile()">
+                            Update my Profile
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="col-3"></div>
+            </div>
+        </div>
+</section>
+

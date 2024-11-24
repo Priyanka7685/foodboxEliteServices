@@ -1,0 +1,56 @@
+<section class="section-booking bg1-pattern p-t-100 p-b-130">
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-lg-6 p-b-30">
+                <div class="t-center">
+                    <span class="tit2 t-center">
+                        Login
+                    </span>
+
+                    <h3 class="tit3 t-center m-b-35 m-t-2">
+                         Login yourself
+                    </h3>
+                    <button type="submit" class="submit text-white btn3 size13 txt11 trans-0-4" routerLink="/customer/home">Back to home</button>
+                </div>
+                <p class="text-center py-3 ">Don't have an account?<a routerLink="/customer/register"><b>Register Now</b></a></p>
+
+                <!-- Form start -->
+                <form (submit)="loginSubmit()" class="wrap-form-booking" #loginForm = 'ngForm' >
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <!-- Email -->
+                            <span class="txt9">
+                                Email
+                            </span>
+
+                            <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email1" [(ngModel)] = 'email' placeholder="Email">
+                            </div> 
+
+                            <!-- Password -->
+                            <span class="txt9">
+                                Password
+                            </span>
+
+                            <div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                <input class="bo-rad-10 sizefull txt10 p-l-20" type="password" name="password" [(ngModel)] = "password" placeholder="Enter your password">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="wrap-btn-booking flex-c-m m-t-6">
+                        <!-- Button3 -->
+                        <button type="submit" class="btn3 flex-c-m size13 txt11 trans-0-4"  [disabled]="loginForm.invalid">
+                            Login
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="col-3"></div>
+            </div>
+        </div>
+</section>

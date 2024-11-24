@@ -1,0 +1,74 @@
+<!-- Title Page -->
+
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="
+    background-image: url(assets/images/bcg2.jpg); 
+  ">
+    <!-- <h2 class="tit6 t-center">Dashboard</h2> -->
+    <div class="mgmeal title-event t-center m-b-52">
+        <span class="tit2 p-l-15 p-r-15 " style="font-size: 70px;">
+            Manage Meals
+        </span>
+        <h3><a routerLink="/admin/dashboard" class=" p-1" style="font-size: 20px;" >Dashboard/</a>
+            <a routerLink="/admin/manage-meals" class=" p-1" style="font-size: 20px;" >Manage meals</a></h3>
+        </div>
+
+</section>
+
+
+<!-- Meals Table -->
+<div class=" container-xxl py-5 px-5">
+    <!-- <div class="container "> -->
+        <div class="row">
+            <div class="col-lg-10">
+                <h1>Manage Meals</h1>
+            </div>
+            <div class="col-lg-2 text-end">
+                <button class="btn btn-danger" routerLink="/admin/add-meals">Add Meal</button>
+            </div>
+        </div>
+        <table class="table table-danger">
+            <thead>
+              <tr>
+                <th scope="col" style="text-align: center;">#</th>
+                <th scope="col" style="text-align: center;">Type</th>
+                <th scope="col" style="text-align: center;">Day 1</th>
+                <th scope="col" style="text-align: center;">Day 2</th>
+                <th scope="col" style="text-align: center;">Day 3</th> 
+                <th scope="col" style="text-align: center;">Day 4</th> 
+                <th scope="col" style="text-align: center;">Day 5</th> 
+                <th scope="col" style="text-align: center;">Day 6</th> 
+                <th scope="col" style="text-align: center;">Day 7</th> 
+                <th scope="col" style="text-align: center;">Price Per Day</th> 
+                <th scope="col" style="text-align: center;">Created At</th>
+                <th scope="col" style="text-align: center;" >Status</th>
+              </tr>
+
+            </thead>
+            <tbody>
+              @for (y of manageMeals; track $index) {
+                <tr style="text-align: center;">
+                  <th scope="row">{{$index+1}}</th>
+                  <td><b>{{y?.type}}</b></td>   
+                  <td>{{y?.day1}} </td>   
+                  <td>{{y?.day2}} </td>   
+                  <td>{{y?.day3}}</td>   
+                  <td>{{y?.day4}}</td>   
+                  <td>{{y?.day5}}</td>   
+                  <td>{{y?.day6}}</td>   
+                  <td>{{y?.day7}}</td>   
+                  <td>{{y?.pricePerDay | currency: 'INR'}}</td>      
+                  <td>{{y?.createdAt | date: 'short'}}</td>
+                  <td>
+                      <button class="btn btn-success m-r-15 m-b-5" [routerLink]="['/admin/update-meals',y?.id]">
+                        <i class="bi bi-pen fs-4"></i>
+                      </button>
+                      <button class="btn btn-danger m-r-15 m-b-6" (click) = "deleteFunc(y?.id)" >
+                          <i class="bi bi-trash3 fs-4"></i>
+                      </button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+    <!-- </div> -->
+</div>
