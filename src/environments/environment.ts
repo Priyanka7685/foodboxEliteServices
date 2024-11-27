@@ -1,4 +1,3 @@
-
 export const environment = {
     firebase:{
         apiKey: "AIzaSyB1fTxpZn_72N_wzCMSw2m9pqiwA-eRMBc",
